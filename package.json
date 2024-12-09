@@ -4,7 +4,8 @@
   "description": "Experimental project to replace Mathematical Base Defenders' handling of rooms, as well as setting a \"framework\" for other projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "mistertfy64",
