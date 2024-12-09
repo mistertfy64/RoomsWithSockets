@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/mistertfy64/rooms-with-sockets#readme",
   "private": "true",
-  "dependencies": {
+  "devDependencies": {
+    "@types/node": "^22.10.1",
     "typescript": "^5.7.2"
   }
 }
