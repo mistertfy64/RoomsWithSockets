@@ -1,6 +1,7 @@
+import { TickOperation } from "./TickOperation";
 class Spectator {
   data: Record<string, unknown>;
-  tickOperations: { (data: unknown): unknown }[];
+  tickOperations: Array<TickOperation>;
 
   constructor() {
     this.data = {};
@@ -8,8 +9,8 @@ class Spectator {
   }
 
   doTickOperations() {
-    for (let operation in this.tickOperations) {
-      this.tickOperations[operation];
+    for (let operation of this.tickOperations) {
+      operation.action(operation.variables);
     }
   }
 }

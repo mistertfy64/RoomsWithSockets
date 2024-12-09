@@ -11,8 +11,7 @@ class Member {
 
   doTickOperations() {
     for (let operation of this.tickOperations) {
-      console.log(operation);
-      operation.action(operation.variables)
+      operation.action(operation.variables);
     }
   }
 }

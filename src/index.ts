@@ -1,11 +1,11 @@
 import { Member } from "./Member";
 import { Spectator } from "./Spectator";
-
+import { TickOperation } from "./TickOperation";
 class RoomWithSockets {
   members: Array<Member>;
   spectators: Array<Spectator>;
   data: Record<string, unknown>;
-  tickOperations: { (data: unknown): unknown }[];
+  tickOperations: Array<TickOperation>;
   id: string;
 
   constructor(id: string) {
@@ -19,8 +19,8 @@ class RoomWithSockets {
   tick(ticks: number) {
     for (let step = 1; step <= ticks; step++) {
       /** Run room-wide `tickOperations` first. */
-      for (let operation in this.tickOperations) {
-        this.tickOperations[operation];
+      for (let operation of this.tickOperations) {
+        operation.action(operation.variables);
       }
       /** Run `tickOperations` for every member next. */
       for (let member of this.members) {
