@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "es6",                                                                                              
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            
+    "strict": true,       
+    "outDir": "dist",                                
+    "skipLibCheck": true, 
+    "lib": ["es2021", "dom"],   
+    "moduleResolution": "node",    
+    "declaration": true,
+  }
+}

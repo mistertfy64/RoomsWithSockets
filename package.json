@@ -1,0 +1,27 @@
+{
+  "name": "@mistertfy64/rooms-with-sockets",
+  "version": "0.1.0",
+  "description": "Experimental project to replace Mathematical Base Defenders' handling of rooms, as well as setting a \"framework\" for other projects.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "mistertfy64",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistertfy64/rooms-with-sockets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mistertfy64/rooms-with-sockets/issues"
+  },
+  "homepage": "https://github.com/mistertfy64/rooms-with-sockets#readme",
+  "private": "true",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}
