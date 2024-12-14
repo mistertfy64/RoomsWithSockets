@@ -1,6 +1,10 @@
 import { Member } from "./Member";
 import { Spectator } from "./Spectator";
 import { TickOperation } from "./TickOperation";
+
+/**
+ * This class represent a room with sockets.
+ */
 class RoomWithSockets {
   members: Array<Member>;
   spectators: Array<Spectator>;
@@ -8,6 +12,11 @@ class RoomWithSockets {
   tickOperations: Array<TickOperation>;
   id: string;
 
+  /**
+   * Constructs a room.
+   * @param {string} id The identifier of a room.
+   * Recommended to be randomly generated.
+   */
   constructor(id: string) {
     this.members = [];
     this.spectators = [];
@@ -16,6 +25,11 @@ class RoomWithSockets {
     this.id = id;
   }
 
+  /**
+   * Runs  every operation attached to this room, and all sockets in it.
+   * @param {number} ticks The number of rounds to run every operation
+   * attached to this room, and all sockets in it.
+   */
   tick(ticks: number) {
     for (let step = 1; step <= ticks; step++) {
       /** Run room-wide `tickOperations` first. */

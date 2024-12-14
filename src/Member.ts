@@ -1,5 +1,8 @@
 import { TickOperation } from "./TickOperation";
 
+/**
+ * This class represents an active player in a room.
+ */
 class Member {
   data: Record<string, unknown>;
   tickOperations: Array<TickOperation>;
