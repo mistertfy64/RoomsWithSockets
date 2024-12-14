@@ -1,5 +1,8 @@
 type SafeAnyObject = { [key: string]: unknown };
 
+/**
+ * This class represents a operation to be done every tick.
+ */
 class TickOperation {
   operation: SafeAnyObject & {
     "action": { (parameters: SafeAnyObject): void };
